@@ -14,10 +14,10 @@ class UI(QMainWindow):
         self.initGui()        
 
     def initTwitterAccount(self):
-        consumer_key = "HJbXGzA8ETRRwt8oDxz5JlWWP"
-        consumer_secret = "QUnhmJwvjZiJZOzhqO7JsREZ6Qk2vm8xgA9Ey0llDnsxS8ukY8"
-        access_token = "716441363730968576-fUhXjhYy2aLpvCWoddqcKRjhgplY1Ei"
-        access_token_secret = "2uBQCqhpD0gitGbaLMA0of5gYq1LKDZ3r2tFtnx0FfvqJ"
+        consumer_key = "＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊"
+        consumer_secret = "＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊"
+        access_token = "＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊"
+        access_token_secret = "＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊"
         auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
         auth.set_access_token(access_token, access_token_secret)
         auth.secure = True
