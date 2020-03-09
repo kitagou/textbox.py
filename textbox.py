@@ -23,7 +23,7 @@ class UI(QMainWindow):
         auth.secure = True
         # ツイートを送信するためのapiを取得
         self.api = tweepy.API(auth)
-    
+        # アカウント関連
     def initUI(self):      
         self.setGeometry(10, 10, 400, 400)
         self.setWindowTitle('Sample_text')
@@ -35,7 +35,7 @@ class UI(QMainWindow):
         hbox.addWidget(self.label)
         self.w.setLayout(hbox)
         self.setCentralWidget(self.w)
-
+       # 投稿画面設定 
     def initGui(self):
         self.text = QTextEdit(self)
         self.text.setGeometry(15, 15, 300, 150)
@@ -45,14 +45,14 @@ class UI(QMainWindow):
         self.button.clicked.connect(self.countup)
         
         self.show()
-    
+       # TLの画面設定
     def countup(self):
         text = self.text.toPlainText()
-        # self.label.setText(text)
+        self.label.setText(text)         
         self.api.update_status(text)
-            
-        self.text.clear()
-
+        self.listWidget.insertItem(0, text)   
+        self.text.clear() 
+       #投稿後投稿画面から文字を消す         
 
 def main():
     app = QApplication(sys.argv)
